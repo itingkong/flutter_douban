@@ -20,7 +20,15 @@ class HotWidgetState extends State<HotWidget> {
           padding: EdgeInsets.only(left: 20, right: 20),
           child: Row(
             children: <Widget>[
-              Text('上海', style: TextStyle(fontSize: 16.0)),
+              GestureDetector(
+                child: Text(
+                  '上海',
+                  style: TextStyle(fontSize: 16.0),
+                ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/Citys');
+                },
+              ),
               Icon(Icons.arrow_drop_down),
               Expanded(
                 flex: 1,
