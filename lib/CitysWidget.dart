@@ -141,7 +141,10 @@ class CitysWidgetState extends State<CitysWidget> {
                                   child: Text(hotCitys[index]),
                                   color: Colors.white,
                                   elevation: 0,
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    print('hotCitys: ${hotCitys[index]}');
+                                    Navigator.pop(context, hotCitys[index]);
+                                  },
                                 );
                               },
                             ),

@@ -11,6 +11,16 @@ class HotWidget extends StatefulWidget {
 class HotWidgetState extends State<HotWidget> {
   String curCity = '上海';
 
+  void _jumpToCitysWidget() async {
+    var selectCity =
+        await Navigator.pushNamed(context, '/Cities', arguments: curCity);
+
+    if (selectCity == null) return;
+    setState(() {
+      curCity = selectCity;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,7 +38,7 @@ class HotWidgetState extends State<HotWidget> {
                   style: TextStyle(fontSize: 16.0),
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/Citys', arguments: curCity);
+                  _jumpToCitysWidget();
                 },
               ),
               Icon(Icons.arrow_drop_down),

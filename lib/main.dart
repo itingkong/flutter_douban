@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(title: '豆瓣电影'),
       routes: {
-        '/Citys': (context) => CitysWidget(),
+        '/Cities': (context) => CitysWidget(),
       },
     );
   }
