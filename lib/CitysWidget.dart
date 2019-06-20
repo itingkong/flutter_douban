@@ -13,6 +13,7 @@ class CitysWidgetState extends State<CitysWidget> {
   @override
   Widget build(BuildContext context) {
     curCity = ModalRoute.of(context).settings.arguments;
+
     List<String> hotCitys = [
       '北京',
       '上海',
@@ -147,6 +148,9 @@ class CitysWidgetState extends State<CitysWidget> {
                           ),
                         )
                       ],
+                    ),
+                    Center(
+                      child: Text('国外'),
                     ),
                   ],
                 ),

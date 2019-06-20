@@ -51,7 +51,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  // int _counter = 0;
   int _selectedIndex = 0;
   final _widgetItems = [HotWidget(), MoviesWidget(), MineWidget()];
   // final _widgetItems = [HotWidget(), MoviesWidget(), MineWidget()];
