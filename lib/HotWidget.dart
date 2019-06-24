@@ -17,6 +17,10 @@ class HotWidgetState extends State<HotWidget> {
         await Navigator.pushNamed(context, '/Cities', arguments: curCity);
 
     if (selectCity == null) return;
+
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setString('curCity', selectCity);
+
     setState(() {
       curCity = selectCity;
     });
