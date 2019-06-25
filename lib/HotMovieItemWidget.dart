@@ -13,7 +13,8 @@ class HotMovieItemWidget extends StatefulWidget {
 }
 
 class HotMovieItemWidgetState extends State<HotMovieItemWidget> {
-  static const methodChannel = MethodChannel('flutter.flutter_douban/buy');
+  static const methodChannel =
+      const MethodChannel('flutter.flutter_douban/buy');
   @override
   Widget build(BuildContext context) {
     return Container(
